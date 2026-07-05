@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
-import DashboardLayout from "../pages/dashboard/DashboardLayout";
+import DashboardLayout from "../layouts/DashboardLayout";
 import ProtectedRoute from "./ProtectedRoute";
 
 // Pages

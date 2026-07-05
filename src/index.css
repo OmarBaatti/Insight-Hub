@@ -8,5 +8,14 @@ body,
 }
 
 body {
+  @apply bg-base-100 text-base-content;
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
