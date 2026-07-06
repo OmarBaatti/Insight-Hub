@@ -7,7 +7,10 @@ export default function MainLayout() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <main className="flex-1 bg-base-100">
+      <main
+        className="flex-1"
+        style={{ background: "var(--bg)" }}
+      >
         <Outlet />
       </main>
 

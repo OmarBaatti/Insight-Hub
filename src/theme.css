@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&display=swap');
+
+:root {
+  --bg: #0B0A08;
+  --surface: #151210;
+  --surface-2: #1C1814;
+  --ink: #F3ECDF;
+  --ink-soft: #A79C8A;
+  --rule: #2A241D;
+  --rule-strong: #3A3226;
+  --red: #8C2F39;
+  --red-bright: #A83E49;
+  --gold: #B99A4B;
+  --gold-bright: #D4B876;
+  --radius: 10px;
+}
+
+body { background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; }
+.font-display { font-family: 'Cormorant Garamond', serif; }
+.font-arabic { font-family: 'Amiri', serif; direction: rtl; }
+
+.btn-cal {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  transition: all .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-cal-solid { background: var(--red); color: var(--ink); border: 1px solid var(--red); }
+.btn-cal-solid:hover { background: var(--red-bright); }
+.btn-cal-outline { background: transparent; color: var(--gold-bright); border: 1px solid var(--rule-strong); }
+.btn-cal-outline:hover { border-color: var(--gold); background: var(--surface-2); }
+.btn-cal:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.panel-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.panel-card:hover {
+  border-color: var(--rule-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -24px rgba(0,0,0,0.6);
+}
+
+.chip {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  display: inline-block;
+}

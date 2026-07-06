@@ -1,34 +1,23 @@
 export default function ResourceCard({ title, type, link }) {
   return (
-    <div className="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 border border-base-200">
+    <div className="panel-card p-6 flex flex-col h-full">
+      <div className="flex items-start justify-between gap-3">
+        <h2 className="font-display text-xl leading-snug" style={{ color: "var(--ink)" }}>
+          {title}
+        </h2>
+        <span className="chip shrink-0" style={{ background: "rgba(185,154,75,0.16)", color: "var(--gold-bright)" }}>
+          {type || "Resource"}
+        </span>
+      </div>
 
-      <div className="card-body">
+      <p className="text-sm mt-3 flex-1" style={{ color: "var(--ink-soft)" }}>
+        A resource curated for learning and reflection.
+      </p>
 
-        <div className="flex justify-between items-center">
-          <h2 className="card-title text-lg">{title}</h2>
-
-          <span className="badge badge-secondary badge-sm">
-            {type || "Resource"}
-          </span>
-        </div>
-
-        <p className="text-sm opacity-70 mt-2">
-          External learning resource
-        </p>
-
-        <div className="card-actions justify-end mt-4">
-
-          <a
-            href={link || "#"}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-outline btn-sm"
-          >
-            Open
-          </a>
-
-        </div>
-
+      <div className="flex justify-end mt-6 pt-4" style={{ borderTop: "1px solid var(--rule)" }}>
+        <a href={link || "#"} target="_blank" rel="noreferrer" className="btn-cal btn-cal-outline text-xs px-4 py-1.5">
+          Open
+        </a>
       </div>
     </div>
   );
